@@ -1,0 +1,14 @@
+.btn{
+    border-color: #048998;
+    color: #048998;
+}
+.btn:hover{
+    background-color: #048998;
+}
+.bi{
+    color: #035c66;
+}
+.form-control:focus{
+    border-color: #035c66;
+    box-shadow: 0 0 8px #04717e;
+}

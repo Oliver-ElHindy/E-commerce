@@ -1,0 +1,21 @@
+body{
+	background: #035c66 !important;
+	
+}
+form{
+    background: #f6f5f5;
+}
+.form-container{
+    border-radius: 5px;
+    padding: 40px;
+}
+.btn{
+    background-color: #048998;
+}
+.btn:hover{
+    background-color: #035c66;
+}
+.form-control:focus{
+    border-color: #035c66;
+    box-shadow: 0 0 8px #04717e;
+}
