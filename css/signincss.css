@@ -1,6 +1,5 @@
 body{
-	background: #035c66 !important;
-	
+	background: #035c66 !important;	
 }
 form{
     background: #f6f5f5;
@@ -18,4 +17,13 @@ form{
 .form-control:focus{
     border-color: #035c66;
     box-shadow: 0 0 8px #04717e;
+}
+.form-cont{
+    margin-top: 20vh;
+}
+.navbar-toggler{
+    color: grey !important;
+}
+.btn-block{
+    color: white !important;
 }

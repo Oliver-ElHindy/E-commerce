@@ -1,9 +1,13 @@
-.btn{
+.btn-outline-success{
     border-color: #048998;
-    color: #048998;
-}
-.btn:hover{
     background-color: #048998;
+}
+.btn-outline-success:active{
+    border-color: #048998;
+    background-color: #048998 !important;
+}
+.btn-outline-success:hover{
+    background-color: #035c66;
 }
 .bi{
     color: #035c66;
@@ -11,4 +15,10 @@
 .form-control:focus{
     border-color: #035c66;
     box-shadow: 0 0 8px #04717e;
+}
+.btn-outline-success{
+    color: white;
+}
+.navbar-toggler{
+    color: grey !important;
 }
