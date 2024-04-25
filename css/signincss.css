@@ -5,7 +5,7 @@ form{
     background: #f6f5f5;
 }
 .form-container{
-    border-radius: 5px;
+    border-radius: 6px;
     padding: 40px;
 }
 .btn{
@@ -21,9 +21,15 @@ form{
 .form-cont{
     margin-top: 20vh;
 }
-.navbar-toggler{
-    color: grey !important;
+.form-control:focus{
+    border-color: #035c66;
+    box-shadow: 0 0 8px #04717e;
 }
-.btn-block{
-    color: white !important;
+.form-select:focus{
+    border-color: #035c66;
+    box-shadow: 0 0 8px #04717e;
+}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
