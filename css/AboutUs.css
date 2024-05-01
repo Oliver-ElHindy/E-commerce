@@ -100,3 +100,38 @@
   transform: rotate(-19deg);
   opacity: 0.2;
 }
+
+.bg-success{
+  background: linear-gradient(135deg, #05b6ca, #048998);
+}
+.bg-warning{
+  background: linear-gradient(135deg,#04aacb, #0496c7);
+}
+.list-group {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  margin: 5px 50px;
+}
+
+.list-group-item {
+  background: #F7F7F7;
+  padding: 1em;
+  text-align: center;
+  margin: 10px;
+  border-radius: 6px;
+}
+h3{
+  color: white;
+}
+.icon{
+  width: 30px;
+  margin-right: 25px;
+}
+.bg-secondary{
+  background: linear-gradient(135deg,#05b6ca, #55e2e9);
+}
+.btn:hover{
+  background-color: #F7F7F7;
+  color: #05b6ca !important;
+}
