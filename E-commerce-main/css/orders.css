@@ -1,0 +1,22 @@
+.thead-dark{
+  background-color: green !important;
+}
+.tableContainer{
+  margin: 2vh;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+h3{
+  margin-left: 2vh;
+}
+.col-xl-6{
+  margin: 15px 0px;
+  float: left;
+}
+.mb-0{
+  font-size: 18px;
+}
+.card-statistic-3{
+  height: 160px;
+  width: 220px;
+}

@@ -1,0 +1,110 @@
+.btn-outline-success{
+    border-color: #048998;
+    background-color: #048998;
+}
+.nav-link{
+    color: black;
+}
+
+
+body{
+    background-color: #05b6ca;
+}
+.btn-outline-success:active{
+    border-color: #048998;
+    background-color: #048998 !important;
+}
+.btn-outline-success:hover{
+    background-color:  #048998;
+}
+.bi{
+    color: #035c66;
+}
+.form-control:focus{
+    border-color: #035c66;
+    box-shadow: 0 0 8px #04717e;
+}
+.btn-outline-success{
+    color: white;
+}
+.nav{
+  text-align: center;
+  display: flex;
+  margin-left: 25%;
+  width: 100%;
+  margin-right: 25%;
+  justify-content: center;
+ 
+}
+a{
+    text-decoration: none;
+    color: white ;
+}
+.bg-body-tertiary{
+    width: fit-content;
+    justify-content: center;
+}
+
+.figure{
+    padding-top: 2%;
+    justify-content: center;
+    margin-left: 4%;
+}
+figcaption{
+margin-left: 7%;
+}
+.figure-caption{
+    font-size: large;
+    font-weight: bold;
+}
+
+.figure-name{
+  width: 30%;
+    font-size: large;
+    font-weight: bold;
+}
+input{
+    accent-color: initial;
+}
+li{
+    list-style: none ;
+    font-size: larger;
+    
+    
+}
+li:hover{
+    color: white;
+}
+
+td{
+    border: black  3px double;
+    border-radius: 20%;
+ }
+#qty{
+    width: 35px;
+    border: 1px solid black;
+}
+#ATC{
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #05b6ca;
+}
+#ATC:hover{
+    background-color: #048998;
+}
+a{
+    color: white;
+}
+.categLink{
+    color: white;
+}
+
+ul.dropdown li {
+    position: relative;
+ }
+ 
+ ul.dropdown li ul {
+    position: absolute;
+    top: 20px; /* assign the correct value of the top line height */
+    left: 0px;
+ }

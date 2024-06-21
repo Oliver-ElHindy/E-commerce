@@ -1,0 +1,33 @@
+@media (min-width: 1025px) {
+  .h-custom {
+  height: 100vh !important;
+  }
+  }
+
+.TrashIcon{
+    width: 22px !important;
+    margin-right:60px;
+  }
+
+.bg-primary{
+    background-color: #05b6ca !important;
+}
+
+.btn-info{
+    background-color: #048998;
+    color: white;
+    border: none;
+}
+.btn-info:hover{
+  background-color: #046874;
+  color: white;
+}
+.form-control-lg{
+  height: 20px;
+}
+.hide {
+
+  background: transparent !important;
+  border: none !important;
+  font-size:0 !important;
+}

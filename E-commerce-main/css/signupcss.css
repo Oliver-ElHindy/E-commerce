@@ -1,0 +1,32 @@
+
+.form-control:focus{
+    border-color: #035c66;
+    box-shadow: 0 0 8px #04717e;
+}
+.form-select:focus{
+    border-color: #035c66;
+    box-shadow: 0 0 8px #04717e;
+}
+.row{
+    margin: 10px;
+}
+.form-select{
+    width: 98%; 
+    margin: 10px;       
+}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.btn{
+    margin-left: 22px;
+    margin-top: 10px;
+    background-color: #048998;
+    color: white ;
+}
+.btn:hover{
+    background-color: #035c66 ;
+}
+option:hover {
+    background-color: yellow;
+  }

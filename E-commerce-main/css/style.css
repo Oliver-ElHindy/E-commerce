@@ -1,0 +1,86 @@
+.btn-outline-success{
+    border-color: #048998;
+    background-color: #048998;
+}
+.nav-link{
+    color: black;
+}
+.nav-link:hover{
+    color:#265073;
+    border-radius: 10%;
+}
+
+body{
+    background-color: #05b6ca;
+}
+.btn-outline-success:active{
+    border-color: #048998;
+    background-color: #048998 !important;
+}
+.btn-outline-success:hover{
+    background-color:  #048998;
+}
+.bi{
+    color: #035c66;
+}
+.form-control:focus{
+    border-color: #035c66;
+    box-shadow: 0 0 8px #04717e;
+}
+.btn-outline-success{
+    color: white;
+}
+.nav{
+  text-align: center;
+  display: flex;
+  margin-left: 25%;
+  width: 100%;
+  margin-right: 25%;
+  justify-content: center;
+ 
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.bg-body-tertiary{
+    width: fit-content;
+    justify-content: center;
+}
+
+.figure{
+    padding-top: 2%;
+    justify-content: center;
+    margin-left: 4%;
+}
+figcaption{
+margin-left: 7%;
+}
+.figure-caption{
+    font-size: large;
+    font-weight: bold;
+}
+.categId{
+   color: white; 
+}
+
+.figure-name{
+ 
+    font-size: large;
+    font-weight: bold;
+}
+input{
+    accent-color: initial;
+}
+li{
+    list-style: none ;
+    font-size: larger;
+    
+    
+}
+li:hover{
+    color: white;
+}
+
+ 
+

@@ -1,0 +1,16 @@
+
+
+.img-fluid{
+    height: 450px;
+}
+.carousel-control-prev-icon,.carousel-control-next-icon{
+color: black !important ;
+}
+
+.description{
+    margin-top: 20px;
+  
+}
+input{
+    margin-bottom: 2%;
+}
