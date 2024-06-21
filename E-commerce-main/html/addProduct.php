@@ -249,7 +249,11 @@ $imgreq=$conn->query($imgQuery);
            <?php endwhile;}?>
 </div>
         <button type="submit" class="btn btn-primary btn-block" name="ADDPRODUCTBTN">Edit Product</button>
-        <form></form>
+        </form>
+        <form action="../php/delete.php">
+        <input type="hidden" name="prodId" value="<?php echo $_GET['id']?>">
+        <button type="submit" class="btn btn-primary btn-block" name="ADDPRODUCTBTN">Delete Product</button>
+
         </form>
       </section>
     </section>
