@@ -23,20 +23,24 @@ $payment= mysqli_fetch_assoc($req2);
 if(mysqli_num_rows($req1)) {
     $adress="update adress set Country='$country' ,City='$city'	,Street='$street'	,User_id='$id' ,Apt_nbr='$apa' where User_id='$id' ";
     $conn->query($adress);
+    header("Location:../html/myInfo.php");
     
 } else{
    
     $adress="insert into adress (Country ,City	,Street	,User_id ,Apt_nbr) VALUES ('$country','$city','$street'
     ,'$id','$apa' ) ";
     $conn->query($adress);
+    header("Location:../html/myInfo.php");
    
  }
 
 if(mysqli_num_rows($req2)) {
     $payment="update payment set  Card_type='$card'	,Card_number='$nbr',	User_id='$id',	Card_CVV='$cvc',	Card_Expiration='$exp',	name='$pName' where User_id='$id' ";
     $conn->query($payment);
+    header("Location:../html/myInfo.php");
 } else{
     $payment="insert into payment   (Card_type	,Card_number,	User_id,	Card_CVV,	Card_Expiration,	name) VALUES ('$card','$nbr','$id'
     ,'$cvc','$exp' ,'$pName' ) ";
     $conn->query($payment);
+    header("Location:../html/myInfo.php");
 }
