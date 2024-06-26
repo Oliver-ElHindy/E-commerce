@@ -4,6 +4,7 @@ include("../php/connec.php");
    
     $id = $_SESSION['id'];
     error_reporting(0);
+    include("../php/navBar.php");
  
     $query="SELECT * FROM cart , products where products.Prod_id=cart.Prod_id and User_id='$id'";
     $req=$conn->query($query);
@@ -28,70 +29,7 @@ include("../php/connec.php");
   </head>
 <body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary" style="width: 100%;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="../images/logo.png" style="padding-left:7%; width:55px"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-link">
-                <a class="nav-link active" aria-current="page" href="home.php">Home</a>
-              </li>
-              <li class="nav-link">
-                <a class="nav-link" href="../html/AboutUs.php">About Us</a>
-              </li>
-          
-                <li class="nav-link dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Category
-                  </a>
-                  <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="index.php">All</a></li>
-                    <li><a class="dropdown-item" href="index.php?Products=phone">Phones</a></li>
-                    <li><a class="dropdown-item" href="index.php?Products=laptop">Laptops</a></li>
-                    <li><a class="dropdown-item" href="index.php?Products=pc">Pc</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="index.php?Products=accessory">Accessories</a></li>
-                  </ul>
-                </li>
-              <li class="nav-link">
-                <a class="nav-link" <?php if ($_SESSION['role']!=1) echo 'hidden="hidden"'?> href="../html/addProduct.php">Add product</a>
-              </li>
-         
-            <li class="nav-link">
-              <a class="nav-link" <?php if ($_SESSION['role']!=1) echo 'hidden="hidden"' ?> href="../html/orders.php">Orders</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search" action="index.php">
-            <input class="form-control me-2" name="like" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-          
-            <a href="Sign-in.html"><i class="bi bi-person-fill" style="margin-left: 10px;">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                  </svg>
-                  
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right" style="left: auto; right: 0;">
-                  <li><a class="dropdown-item" href="../html/Cart.php">My Cart</a></li>
-                  <li><a class="dropdown-item" href="../html/userOrders.php">My Orders</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a <?php if ($_SESSION['id']) echo 'hidden="hidden"'?>class="dropdown-item" href="../html/Sign-in.php">Sign-in</a></li>
-                
-                  <li><a <?php if ($_SESSION['id']) echo 'hidden="hidden"'?>class="dropdown-item" href="../html/Sign-up.php">Sign-Up</a></li>
-                  <?php if ($_SESSION['id']) echo ' <li><a class="dropdown-item" href="../html/sign-out.php">Sign Out</a></li>' ?>
-                </ul>
-              </li></i>
-            </a>
 
-            </div>
-        </div>
-      </nav>
 
 
 
@@ -146,91 +84,8 @@ width: 37px
           $cartTotal+=$product['Total_price'];
           endwhile ?>
   
-   
+
          
-  
-          <div class="container">
-            <div class="row">
-              
-          
-              <div class="col-lg-6">
-                <div class="card bg-primary text-white rounded-3">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                      <h5 class="mb-0">Adress</h5>
-                    </div>
-          
-                    <form class="mt-4">
-                      <div data-mdb-input-init class="form-outline form-white mb-4">
-                        <label class="form-label"  for="typeName">Country</label>
-                        <input type="text" id="typeName" class="form-control form-control-lg" value="<?php echo $adress['Country']?>" placeholder="Country" />  
-                      </div>
-
-                      <div data-mdb-input-init class="form-outline form-white mb-4">
-                        <label class="form-label" for="typeName">City</label>
-                        <input type="text" value="<?php echo $adress['City']?>" id="typeName" class="form-control form-control-lg" placeholder="City" />  
-                      </div>
-          
-                      <div data-mdb-input-init class="form-outline form-white mb-4">
-                        <label class="form-label" for="typeText">Street</label>
-                        <input type="text" value="<?php echo $adress['Street']?>" id="typeText" class="form-control form-control-lg" placeholder="Street"/>
-                      </div>
-          
-                      <div data-mdb-input-init class="form-outline form-white mb-4">
-                        <label class="form-label" for="typeText">Apartement number</label>
-                        <input type="text" id="typeText" value="<?php echo $adress['Apt_nbr']?>"class="form-control form-control-lg" placeholder="Apartement number"/>
-                      </div>
-                    
-                    </form>
-
-        </div>
-        
-      </div>
-      
-    </div>
-    <div class="col-lg-6">
-      <div class="card bg-primary text-white rounded-3">
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <h5 class="mb-0">Card details</h5>
-          </div>
-
-          <p class="small mb-2">Card type</p>
-          <select class="form-select" aria-label="Default select example" required>
-            <option disabled selected>Select Card Type</option>
-            <option value="MC" <?php if($payement['Card_type']="MC") echo "active"?>>MasterCard</option>
-            <option value="Visa" <?php if($payement['Card_type']="Visa") echo "active"?>>Visa</option>
-            <option value="AE" <?php if($payement['Card_type']="AE") echo "active"?>>American Express</option>
-          </select>
-
-          <form class="mt-4">
-            <div data-mdb-input-init class="form-outline form-white mb-4">
-              <label class="form-label" for="typeName">Cardholder's Name</label>
-              <input type="text" id="typeName" value="<?php echo $payement['']?>" class="form-control form-control-lg" placeholder="Cardholder's Name" />  
-            </div>
-
-            <div data-mdb-input-init class="form-outline form-white mb-4">
-              <label class="form-label" for="typeText">Card Number</label>
-              <input type="text" id="typeText" value="<?php echo $payement['Card_number']?>" class="form-control form-control-lg" placeholder="1234 5678 9012 3457" minlength="16" maxlength="16" />
-            </div>
-
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div data-mdb-input-init class="form-outline form-white">
-                  <label class="form-label" for="typeExp">Expiration</label>
-                  <input type="text" id="typeExp"value="<?php echo $payement['Card_Expiration']?>" class="form-control form-control-lg" placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" />           
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div data-mdb-input-init class="form-outline form-white">
-                  <label class="form-label" for="typeText">Cvv</label>
-                  <input type="password" id="typeText" value="<?php echo $payement['Card_CVV']?>" class="form-control form-control-lg" placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
-                </div>
-              </div>
-            </div>
-          </form>
-
           <hr class="my-4">
 
           <div class="d-flex justify-content-between">
@@ -246,11 +101,20 @@ width: 37px
           <div class="d-flex justify-content-between mb-4">
             <p class="mb-2">Total</p>
             <p class="mb-2">$<?php echo $cartTotal+20?></p>
+          
           </div>
-
-          <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-block btn-lg">
+          <form action="../php/order.php" action="get">
+          <input type="hidden" name="totalPrice" value="<?php echo $cartTotal+20?>" >
+          <button type="submit" <?php if($cartTotal=="0") echo "disabled"?> data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-block btn-lg">
             Checkout
           </button>
+          </form>
+          <!-- <script>
+            submit=function(){
+              document.getElementById("").submit();
+              document.getElementById("").submit();            
+            } -->
+          </script>
         </div>              
       </div>
     </div>
