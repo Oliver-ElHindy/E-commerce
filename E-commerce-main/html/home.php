@@ -18,14 +18,6 @@ error_reporting(0);
   </head>
 <body>
 
-
-
-
-
-
-
-
-
       <div class="row g-0 text-center" >
         <div class="col-sm-6 col-md-8" style="position: relative;text-align:center; align-items: center; justify-content: center; width: 100%;"> 
           <table style=" position: absolute; align-self: center;top: 30%;right: 30%; z-index: 1;">

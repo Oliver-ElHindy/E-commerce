@@ -19,10 +19,10 @@
  error_reporting(0);
 
 include("../php/connec.php");
-$query="SELECT * FROM products;";
+$query="SELECT * FROM products order by category desc;";
 $req=$conn->query($query);
 if($_GET['like']){
-  $query="SELECT * FROM products where Prod_name LIKE '%". $_GET['like']."%'";
+  $query="SELECT * FROM products where Prod_name LIKE '%". $_GET['like']."%' or Category LIKE '%". $_GET['like']."%'";
 $req=$conn->query($query);
 }
 else if($_GET['Products']){
@@ -61,7 +61,7 @@ $req=$conn->query($query);
                   </ul>
                 </li>
               <li class="nav-link">
-                <a class="nav-link" <?php if ($_SESSION['role']!=1) echo 'hidden="hidden"'?> href="../html/addProduct.php">Add product</a>
+                <a class="nav-link" <?php if ($_SESSION['role']!=1) echo 'hidden="hidden"'?> href="../html/addProduct.php">Add/Edit product</a>
               </li>
          
             <li class="nav-link">
@@ -88,8 +88,8 @@ $req=$conn->query($query);
                   <li><a <?php if ($_SESSION['id']) echo 'hidden="hidden"'?>class="dropdown-item" href="../html/Sign-in.php">Sign-in</a></li>
                 
                   <li><a <?php if ($_SESSION['id']) echo 'hidden="hidden"'?>class="dropdown-item" href="../html/Sign-up.php">Sign-Up</a></li>
-                  <?php if ($_SESSION['id']) echo ' <li><a class="dropdown-item" href="../html/sign-out.php">Sign Out</a></li>' ?>
-                </ul>
+                  <?php if ($_SESSION['id']) echo '  <li><a class="dropdown-item" href="../html/myInfo.php">My info</a></li>
+                  <li><a class="dropdown-item" href="../html/sign-out.php">Sign Out</a></li>' ?>                </ul>
               </li></i>
             </a>
 

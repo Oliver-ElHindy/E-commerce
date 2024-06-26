@@ -30,7 +30,7 @@ session_start()?>
                   </ul>
                 </li>
               <li class="nav-link">
-                <a class="nav-link" <?php if ($_SESSION['role']!=1) echo 'hidden="hidden"'?> href="../html/addProduct.php">Add product</a>
+                <a class="nav-link" <?php if ($_SESSION['role']!=1) echo 'hidden="hidden"'?> href="../html/addProduct.php">Add/Edit product</a>
               </li>
          
             <li class="nav-link">
