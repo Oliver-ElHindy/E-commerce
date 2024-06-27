@@ -16,6 +16,27 @@ $adId=$adress['Adress_id'];
        header("Location:../html/myInfo.php");
     } 
     else{
+
+        $ProfitQuery="SELECT * FROM cart , products where products.Prod_id=cart.Prod_id and User_id='$id'";
+        $req=$conn->query($ProfitQuery);
+        $cartTotal=0;
+
+     while ($profit= mysqli_fetch_assoc($req)){
+        $date=date('d/m/y H:i:s');
+        $Totalprofit=$profit['ProfitPerUnit']*$profit['Quantity'];
+        $prodid=$profit['Prod_id'];
+        $quan=$profit['Quantity'];
+        $name=$profit['Prod_name'];
+        $insertProfit="Insert into profit (
+Prod_ID	,
+QTY_SOLD	,
+ProfitPU	,
+Date	,
+Prod_name	) VALUES ('$prodid','$quan','$Totalprofit','$date','$name') ";
+$req5=$conn->query($insertProfit);
+        }
+
+
         $orderQuery="Insert into orders (
 Date,
 Adress_ID,
