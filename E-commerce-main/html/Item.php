@@ -64,11 +64,13 @@ $req=$conn->query($query);
                    ?>          </div>
         
         <div class="form-check form-check-inline" style="margin-right:5px">
-        <form action="addToCart.php">
-          <input type="hidden" name="Product"value="<?php echo $_GET['Product'];?>" >
+       
 
         <label <?php if($product['Prod_Quantity']=="0"){ ?>style="color: red">  <?php echo "OUT OF STOCK";?> </label> <?php echo "<br>";} ?>
-          <?PHP if($product['Category']=="accessory") $type="hidden";else $type="radio"?>
+        <form action="addToCart.php">
+        <input type="hidden" name="Product"value="<?php echo $_GET['Product'];?>" >
+        <?PHP if($product['Category']=="accessory") $type="hidden";else $type="radio"?>
+
         <input type="<?php echo $type ?>" name="option" value="1" checked>
         <label <?php echo $type ?>>8GB/128GB <?php echo $product['Prod_price'] ?>$</label>
 
